@@ -1,9 +1,7 @@
 # binaryprotocol
 Komunikacja pomiędzy klientem a serwerem (1:1), w oparciu o autorski protokół binarny. Serwer ma rolę kalkulatora, który wykonuje działania na liczbach podanych przez klienta.
 
-Protokół:
-● połączeniowy;
-● wszystkie dane są przesyłane binarnie
+Protokół połączeniowy, wszystkie dane są przesyłane binarnie.
 
 Format komunikatu:
 PO    Liczba1   Liczba2    PS   Identyfikator obliczenia    Wynik     DOP
@@ -19,10 +17,15 @@ których wykonywane są operacje.
 
 ● PS - 2-bitowe pole statusu. Możliwe wartości PS:
     ○ 00 - potęgowanie
+    
     ○ 00 - OK
+    
     ○ 01 - podano niepoprawne dane (np. dzielenie przez 0, logarytm z 1 i 1)
+    
     ○ 10 - wynik wykracza poza zakres (większy od 2^64 − 1)
+    
     ○ 11 - operacja nie istnieje
+    
 
 ● ID - identyfikator obliczenia - 16-bitowe pole będące 5-cyfrową liczbą, której
 dwie pierwsze cyfry to identyfikator sesji, a cała tworzy identyfikator jednego
