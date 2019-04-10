@@ -7,15 +7,21 @@ Format komunikatu:
 PO    Liczba1   Liczba2    PS   Identyfikator obliczenia    Wynik     DOP
 
 ● PO - 2-bitowe pole operacji. Możliwe wartości PO:
+
     ○ 00 - potęgowanie
+    
     ○ 01 - logarytm
+    
     ○ 10 - a modulo b
+    
     ○ 11 - dzielenie
+    
 
 ● Liczba1, Liczba2 - pola 64-bitowe będące binarnym przedstawieniem liczb, na
 których wykonywane są operacje.
 
 ● PS - 2-bitowe pole statusu. Możliwe wartości PS:
+
     ○ 00 - potęgowanie
     
     ○ 00 - OK
